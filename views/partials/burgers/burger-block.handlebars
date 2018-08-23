@@ -1,0 +1,11 @@
+<li>
+    {{!-- <form action="/burger/update/{{this.id}}?_method=PUT" method="POST"> --}}
+    <form>
+    <div class="burger_name" style="font-size: 14pt; padding: 10px; color: black; font-family: 'Comic Sans MS', cursive, sans-serif">
+        #{{id}}: {{burger_name}}
+    </div>
+        <img src="https://www.logolynx.com/images/logolynx/c0/c0808858ba13bbcb8fbdba055a13c56c.png" alt="Bob's Burger Image" style="width:300px; height:300px;">
+        <br>
+        <button class="delete-burger" data-id="{{this.id}}">DELETE!</button>
+    </form>
+</li>
