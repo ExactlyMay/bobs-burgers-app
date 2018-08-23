@@ -9,7 +9,7 @@ connection = mysql.createConnection({
   port: process.env.PORT || 8889,
   user: "root",
   password: "root",
-  database: "burger_db"
+  database: "s0ua41ek6imoht3y"
 });
 
 connection.connect(function(err) {
