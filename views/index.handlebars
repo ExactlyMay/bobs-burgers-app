@@ -1,29 +1,26 @@
 <div class="container text-center">
-  <h1>Burgers!</h1>
-
+  <div class="jumbotron">
+  <h1 class="display-4">Bob's Burgers</h1>
+  </div>
   <div class="row">
     <div class="col-md">
       <h2>Burgers that are available!</h2>
-      <ul>
         {{#each burgers}}
           {{#unless devoured}}
             {{> burgers/burger-block devoured=true}}
+            <button type="button" class="btn btn-warning btn-xs" data-id="{{this.id}}">DEVOUR</button>
           {{/unless}}
         {{/each}}
-      </ul>
     </div>
     <div class="col-md">
       <h2>Burgers that are devoured!</h2>
-      <ul>
         {{#each burgers}}
           {{#if devoured}}
             {{> burgers/burger-block devoured=false}}
           {{/if}}
         {{/each}}
-      </ul>
     </div>
   </div>
-</div>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
@@ -33,5 +30,6 @@
     <input type="text" id="ca" name="burger_name">
   </div>
 
-  <button type="submit">Add Burger</button>
+  <button type="submit" class="btn btn-success">Add Burger</button>
 </form>
+</div>
