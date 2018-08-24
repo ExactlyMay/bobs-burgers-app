@@ -8,7 +8,7 @@
         {{#each burgers}}
           {{#unless devoured}}
             {{> burgers/burger-block devoured=true}}
-            <button type="button" class="btn btn-warning btn-xs" data-id="{{this.id}}">DEVOUR</button>
+            <button type="button" class="btn btn-warning btn-xs btn-devour" data-id="{{this.id}}">DEVOUR</button>
           {{/unless}}
         {{/each}}
     </div>
@@ -30,6 +30,6 @@
     <input type="text" id="ca" name="burger_name">
   </div>
 
-  <button type="submit" class="btn btn-success">Add Burger</button>
+  <button id="submit-btn" class="btn btn-success">Add Burger</button>
 </form>
 </div>
